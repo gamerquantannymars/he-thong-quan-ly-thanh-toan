@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Database connection
-mongoose.connect('mongodb://localhost:27017/payment_system', { useNewUrlParser: true, useUnifiedTopology: true })
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/payment_system';
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Database connected!'))
   .catch(err => console.log(err));
 
