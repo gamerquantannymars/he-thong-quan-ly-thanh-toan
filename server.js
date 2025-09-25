@@ -10,7 +10,7 @@ app.use(express.json());
 const dbURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/payment_system';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Database connected!'))
-  .catch(err => console.log(err));
+  .catch(err => console.error('Database connection error:', err));
 
 // Routes
 app.get('/', (req, res) => {
