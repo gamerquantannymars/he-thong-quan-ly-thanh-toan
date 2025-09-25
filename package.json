@@ -1,5 +1,5 @@
 {
-  "name": "he-thong-quan-ly-thanh-toan",
+  "name": "payment-management-system",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
