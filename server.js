@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost:27017/payment_system', { useNewUrlParser: 
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('Chào mừng bạn đến với Hệ Thống Quản Lý Thanh Toán!');
+  res.send('Welcome to the Payment Management System!');
 });
 
 app.listen(PORT, () => {
